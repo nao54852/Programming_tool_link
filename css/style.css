@@ -1,0 +1,843 @@
+/* 共通----------------------------------------------------------------------------------------------------------------- */
+@charset "utf-8";
+
+html {
+    font-size:62.5%;/*pxだと10px;*/
+}
+
+body {
+    /* font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif; */
+    font-family: "M PLUS 1p";
+    /* transform: rotate(0.05deg);
+    フォントのつぶれ解消 */
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+/* M PLUS 1p　標準 */
+@font-face {
+    src: url(../fonts/MPLUS1p-Regular.woff) format("woff");
+    font-family: "M PLUS 1p";
+    font-style: normal;
+    font-display: swap;
+}
+
+/* M PLUS 1p　medium */
+@font-face {
+    src: url(../fonts/MPLUS1p-Medium.woff) format("woff");
+    font-family: 'M PLUS 1p';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+/* M PLUS 1p　bold */
+@font-face {
+    src: url(../fonts/MPLUS1p-Bold.woff) format("woff");
+    font-family: 'M PLUS 1p';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+}
+
+
+
+/* Header---------------------------------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    align-items: center;
+}
+
+.page-header h1 {
+    margin: 0;
+    height: 64px;
+    font-size: 3.2rem;
+}
+
+.page-header a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color:rgb(47, 79, 79);
+}
+
+.logo{
+    width: 64px;
+    margin: 0 16px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    margin-top: 8px;
+    padding: 16px;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 12px;
+    color: rgb(47, 79, 79);
+    font-size: 1.8rem;
+}
+
+.nav li+ li {
+    border-left: 1px solid rgba(47, 79, 79,0.5);
+}
+/* li + li   二つ目のliから適用 */
+
+.nav ul :hover {
+    color: orangered;
+}
+/* ハンバーガーメニュー非表示 */
+.hamburger-menu {
+    display: none;
+}
+
+/* Index ページ------------------------------------------------------------------------------------------------------------------------- */
+
+/* Main------------------------------------------------------------------ */
+.mv {
+    background-image: url(../img/bg/woman-g0f40b24d8_1920.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.catch {
+    position: absolute;
+    text-align: right;
+    top: 10%;
+    right: 10%;
+    color: rgba(238, 232, 170,0.6);
+}
+
+.catch h2 {
+    font-size: 7.2rem;
+}
+
+.catch h3 {
+    font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+    margin: 0;
+    font-size: 2.4rem;
+}
+
+span {
+    display: inline-block;
+}
+
+/* Contents------------------------------------------------- */
+.title h2{
+    font-size: 4.8rem;
+    letter-spacing: 0.3em;
+    color: rgb(47, 79, 79);
+    margin: 0;
+    text-align: center;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    background-color: rgba(47, 79, 79,0.8);
+}
+
+.container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.container img {
+    flex-basis: 50%;
+}
+
+.container .txt {
+    flex-basis: 50%;
+}
+
+.container h3{
+    padding-left: 16px;
+    font-size: 4rem;
+    letter-spacing: 0.05em;
+    color: rgb(238, 232, 170,0.7);
+}
+
+.container p {
+    padding-left: 24px;
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.container .btn {
+    margin-top: 96px;
+    margin-left: 42%;
+}
+
+.btn a{
+    display: flex;
+	justify-content: center;
+	position: relative;
+    align-items: center;
+	width: 300px;
+	height: 60px;
+    color: rgb(238, 232, 170,0.9);
+	font-size: 1.8rem;
+	font-weight: 700;
+	text-decoration: none;
+	transition: 0.3s;
+    background-color: rgb(47, 79, 79);
+    border: 1px solid rgb(47, 79, 79);
+    border-radius: 35px;
+}
+
+.btn a:hover {
+	color: #f2f2f2;
+    background-color: rgba(255, 69, 0,0.7);
+    border: 1px solid rgba(255, 69, 0,0.7);
+}
+
+.btn a::before {
+    content: '';
+	position: absolute;
+	top: calc(50% - 5px);
+	right: -35px;
+	transform: rotate(30deg);
+	width: 12px;
+}
+
+/* Footer------------------------------------------------------------------- */
+footer {
+    background-color: rgba(47, 79, 79,0.5);
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    margin: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo h1 {
+    margin: 0;
+    color: rgb(47, 79, 79);
+    font-size: 3.2rem;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.footer-nav a {
+    margin-right: 24px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: rgb(47, 79, 79);
+}
+
+.footer-nav a:hover {
+    color: rgb(255, 69, 0);
+}
+
+.copyright p {
+    margin: 0;
+    text-align: center;
+    color: rgb(47, 79, 79);
+    font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+}
+
+/* Coding ページ------------------------------------------------------------------------------------------------------------------------ */
+#common {
+    height: auto;
+}
+
+.code-top {
+    background-image: url(../img/content/code.jpg);
+    background-color:rgba(255,255,255,0.6);
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 270px;
+}
+
+.common-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.under-title {
+    height: 202px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.under-title h2 {
+    font-size: 4.8rem;
+    letter-spacing: 0.1em;
+    color: rgb(47, 79, 79);
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 8px;
+    background-color: rgb(47, 79, 79);
+}
+
+.main-nav a {
+    text-decoration: none;
+    margin: 0 20px;
+    color: rgba(255,255,255,0.6);
+    font-size: 1.8rem;
+}
+
+.main-nav a:hover {
+    color: rgb(255, 69, 0);
+}
+
+.description p {
+    width: 80%;
+    margin: 8px auto;
+    font-size: 1.8rem;
+    letter-spacing: 0.025em;
+}
+
+.section {
+    width: 80%;
+    margin: 0 auto 48px;
+}
+
+.item {
+    padding-top: 64px;
+}
+
+.item h2 {
+    margin-bottom: 0;
+    font-size: 2.4rem;
+    letter-spacing: 0.05em;
+}
+
+.item p {
+    font-size: 1.8rem;
+}
+
+.item > p {
+    margin-top: 0;
+}
+
+.item ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.item h3 {
+    border-bottom: 2px solid rgba(47, 79, 79, 0.5);
+    padding-top: 32px;
+    font-size: 2rem;
+}
+
+.item img {
+    border: 1px solid rgb(47, 79, 79);
+    width: 80%;
+    margin-bottom: 8px;
+}
+
+.screenshot {
+    display: block;
+    margin: 0 auto;
+}
+
+.item p:not(.item > p) {
+    margin-left: 48px;
+}
+/* .item直下のp以外の、.item内のpに適用 */
+
+.item li > p {
+    margin: 0;
+}
+/* li直下のpに適用 */
+
+.plugin > p:last-child {
+    margin-top: 16px;
+}
+/* .plugin直下のpの中でも一番最後のpに適用 */
+
+/* Free　images ページ--------------------------------------------------------------------------------------------------------------------- */
+.free-top {
+    background-image: url(../img/content/free.jpg);
+    background-color:rgba(255,255,255,0.6);
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 70%;
+    width: 100%;
+    height: 270px;
+}
+
+.sub-title {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 56px;
+    padding-left: 8px;
+    box-sizing: border-box;
+    border-left: 6px solid rgba(47, 79, 79,0.8);
+}
+
+.sub-title h3 {
+    font-size: 3.2rem;
+}
+
+
+.site-grid  {
+    width: 76%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 40px;
+    margin: 16px auto 40px;
+    padding: 32px;
+    text-align: center;
+    background-color: rgba(47, 79, 79, 0.8);
+}
+
+.site a{
+    text-decoration: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 1.8rem;
+}
+
+.site a:hover {
+    color: rgb(255, 69, 0);
+    text-shadow: 1px 1px black;
+}
+
+.site img {
+    width: 100%;
+}
+
+.site h3 {
+    margin: 0;
+}
+
+/* Design ページ---------------------------------------------------------------------------------------------------------------------------- */
+.design-top {
+    background-image: url(../img/content/desing.jpg);
+    background-color:rgba(255,255,255,0.6);
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 30%;
+    width: 100%;
+    height: 270px;
+}
+
+/* rest ページ---------------------------------------------------------------------------------------------------------------------------------------- */
+.rest-top {
+    background-image: url(../img/content/break.jpg);
+    background-color:rgba(255,255,255,0.6);
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 30%;
+    width: 100%;
+    height: 270px;
+}
+
+.favorite {
+    width: 76%;
+    margin: 16px auto 40px;
+    padding: 0 32px 32px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+.youtuber p {
+    font-size: 1.8rem;
+}
+
+.youtuber p span {
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.sumple {
+    background-color: rgba(47, 79, 79, 0.8);
+}
+
+h5 {
+    padding-top: 32px;
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+h6 {
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+    color: rgba(255,255,255,0.6);
+}
+
+iframe:last-child {
+    margin-bottom: 40px;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 1280px) {
+/* 共通 */
+    
+    header {
+        height: 64px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .page-header h1 {
+        margin-top: 4px;
+        font-size: 3.2rem;
+    }
+
+/* index */
+    .mv {
+        height: 560px;
+    }
+    .catch h2 {
+        font-size: 5.6rem;
+    }
+
+    .catch h3 {
+        font-size: 2rem;
+    }
+
+    .contents {
+        margin: 40px 16px;
+    }
+
+    .title h2 {
+        font-size: 2.8rem;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .container {
+        margin: 0;
+        width: 50%;
+    }
+
+    .container:nth-child(2), .container:nth-child(3) {
+        background-color: rgba(47, 79, 79, 0.5);
+    }
+
+    .container img {
+        display: none;
+    }
+
+    .container .txt {
+        flex-basis: 100%;
+    }
+
+    .container h3{
+        padding: 0;
+        font-size: 2.3rem;
+        font-weight: bold;
+    }
+
+    .container p {
+        margin: 0;
+        padding: 0;
+        font-size: 1.6rem;
+        font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+        color: rgb(28, 46, 46);
+    }
+
+    .container .btn {
+        display: inline-block;
+        margin: 16px auto;
+    }
+
+    .btn a{
+        width: 200px;
+        height: 40px;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    .footer-logo {
+        margin: 8px;
+    }
+    .footer-logo h1 {
+        font-size: 2.4rem;
+    }
+
+    .footer-nav {
+        display: none;
+    }
+
+/* coding */
+    .common-header {
+        height: 64px;
+    }
+
+    .under-title {
+        height: 206px;
+    }
+
+    .under-title h2 {
+        margin: 0;
+        font-size: 4rem;
+    }
+
+    .main-nav a {
+        font-size: 1.6rem;
+    }
+
+    .description {
+        margin-top: 16px;
+    }
+
+    .description p {
+        font-size: 1.6rem;
+        font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+    }
+
+    .section {
+        width: 90%;
+    }
+
+    ul li img {
+        width: 80%;
+        height: 100%;
+    }
+
+/* free image */
+
+    .sub-title h3 {
+        font-size: 2rem;
+    }
+    .site-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+
+    .site {
+        margin-bottom: 16px;
+    }
+
+    .site h3 {
+        font-size: 1.8rem;
+    }
+
+    .site img {
+        height: 100%;
+    }
+
+    /* rest */
+    .favorite {
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 32px 0;
+    }
+
+    iframe {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    /* ハンバーガーメニュー */
+    .hamburger-menu {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .menu-btn {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        display: flex;
+        height: 64px;
+        width: 64px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        background-color: rgb(47, 79, 79);
+    }
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #ffffff;
+        position: absolute;
+    }
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+    .menu-btn span:after {
+        top: 8px;
+    }
+    /* ハンバーガーメニュークリック時×になる */
+    #menu-btn-check:checked ~ .menu-btn span {
+        background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+    }
+    #menu-btn-check:checked ~ .menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    #menu-btn-check:checked ~ .menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    /* チェックボックス非表示 */
+    #menu-btn-check {
+        display: none;
+    }
+    /* メニューの装飾 */
+    .menu-content {
+        width: 25%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 80;
+        background-color: rgb(47, 79, 79);
+    }
+    .menu-content ul {
+        padding: 70px 10px 0;
+    }
+    .menu-content ul li {
+        border-bottom: solid 1px rgba(255,255,255,0.6);
+        list-style: none;
+    }
+    .menu-content ul li a {
+        display: block;
+        width: 100%;
+        font-size: 1.6rem;
+        box-sizing: border-box;
+        color: rgba(255,255,255,0.6);
+        text-decoration: none;
+        padding: 9px 15px 10px 0;
+        position: relative;
+    }
+    .menu-content ul li a::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px rgba(255,255,255,0.6);
+        border-right: solid 2px rgba(255,255,255,0.6);
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11px;
+        top: 16px;
+    }
+    /* 画面外に外す */
+    .menu-content {
+        width: 25%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;/*leftの値を変更してメニューを画面外へ*/
+        z-index: 80;
+        background-color: rgb(47, 79, 79);
+        transition: all 0.5s;/*アニメーション設定*/
+    }
+    /* ボタンクリックしたら表示 */
+    #menu-btn-check:checked ~ .menu-content {
+        left: 75%;/*メニューを画面内へ*/
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .page-header h1 {
+        height: 48px;
+        font-size: 2rem;
+    }
+
+    /* index */
+    .catch h2 {
+        margin-bottom: 40px;
+        font-size: 4.8rem;
+    }
+
+    .catch h3 {
+        font-size: 1.6rem;
+    }
+
+    .container p {
+        font-size: 1.4rem;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .container:nth-child(4) {
+        background-color: rgba(47, 79, 79, 0.5);
+    }
+
+    .container:nth-child(3) {
+        background-color: rgba(47, 79, 79,0.8);
+    }
+
+    /* free */
+    .site-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* rest */
+    .favorite {
+        width: 100%;
+    }
+
+    .youtuber p {
+        padding: 0 32px;
+        text-align: left;
+        text-indent: 1.8rem;
+    }
+
+    iframe {
+        width: 95%;
+    }
+}
